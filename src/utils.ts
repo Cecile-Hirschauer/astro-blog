@@ -8,4 +8,11 @@ const formatDate = (date: Date): string => {
   return new Date(date).toLocaleDateString("en-US", options);
 };
 
-export { formatDate };
+const capitalize = (str: string): string => {
+  if (typeof str !== "string" || str.length === 0) {
+    return str;
+  }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+export { formatDate, capitalize };
